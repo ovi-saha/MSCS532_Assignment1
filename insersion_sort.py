@@ -13,4 +13,4 @@ def insersion_sort(arr):    # Defining a function for insersion sort
 
 arr = [4, 5, 3, 23, 10, 2]    # Decleare the array
 insersion_sort(arr)    # Call the function
-print(arr)    # Print the sorted array
+print(arr)    #Print the sorted array
