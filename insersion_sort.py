@@ -6,11 +6,13 @@
 
 def insersion_sort(arr):    # Defining a function for insersion sort
     for i in range(1, len(arr)):    # Looping from the 2nd element to the last element which is outer loop
-        j = i     # for the inner loop to compare the element to the left 
-        while arr[j-1] < arr[j] and j > 0 :    # Comparing the left and the right element of the array
-             arr[j-1] , arr[j] = arr[j], arr[j-1]    #Swapping with each other 
+        key  = arr[i] # for current element
+        j = i - 1 
+        while j >= 0 and key > arr[j] :    
+             arr[j + 1] = arr[j]   
              j -= 1    #decreasing by 1
+        arr[j + 1] = key
 
 arr = [4, 5, 3, 23, 10, 2]    # Decleare the array
 insersion_sort(arr)    # Call the function
-print(arr)    #Print the sorted array
+print("Sorted array in decreasing order:", arr)    #Print the sorted array
